@@ -7,3 +7,6 @@ Memes
 
 
 Rather be a pig than a fascist
+
+
+Better to die on paws then to live on feet
