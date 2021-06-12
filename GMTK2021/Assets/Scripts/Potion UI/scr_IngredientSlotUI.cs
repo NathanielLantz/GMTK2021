@@ -52,6 +52,5 @@ public class scr_IngredientSlotUI : MonoBehaviour, ISlot
     public void UnsetObject()
     {
         UnsetIngredient();
-        Debug.Log("removing at " + transform.GetSiblingIndex());
     }
 }

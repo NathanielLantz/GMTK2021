@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Potion 1
   sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  colour: {r: 0.8584906, g: 0.29016986, b: 0.29016986, a: 1}
   ingredient1: {fileID: 11400000, guid: 155af0bfec5912b47892f1206b44c25a, type: 2}
   ingredient2: {fileID: 11400000, guid: f61ae9dd994358046982972a7e4f7c09, type: 2}
   ingredient3: {fileID: 11400000, guid: 35be7ff9ed4a90648b6ff7e0943b1a78, type: 2}

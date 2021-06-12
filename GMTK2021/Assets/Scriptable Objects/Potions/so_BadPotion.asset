@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bad Potion
   sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  colour: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   ingredient1: {fileID: 0}
   ingredient2: {fileID: 0}
   ingredient3: {fileID: 0}

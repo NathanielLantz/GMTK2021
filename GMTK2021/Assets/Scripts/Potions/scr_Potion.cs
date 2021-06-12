@@ -15,6 +15,10 @@ public class scr_Potion : ScriptableObject
     public Sprite Sprite => sprite;
 
     [SerializeField]
+    Color colour;
+    public Color Colour => colour;
+
+    [SerializeField]
     [Tooltip("Required ingredients to make this potion. Ingredients cannot repeat, and 3 must be entered")]
     scr_Ingredient ingredient1;
     public scr_Ingredient Ingredient1 => ingredient1;
