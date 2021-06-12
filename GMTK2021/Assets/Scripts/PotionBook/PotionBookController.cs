@@ -18,6 +18,8 @@ public class PotionBookController : MonoBehaviour
     [SerializeField]
     PotionPageContent[] content;
 
+    [SerializeField]
+    AudioClip pageFlipSFX;
 
     int currentPage;
 
@@ -35,6 +37,7 @@ public class PotionBookController : MonoBehaviour
             currentPage = content.Length - 1;
         }
         UpdatePageContent();
+        scr_AudioManager.PlaySoundEffect(pageFlipSFX);
     }
 
     [ContextMenu("Prevous Page")]
@@ -46,6 +49,8 @@ public class PotionBookController : MonoBehaviour
             currentPage = content.Length - 1;
         }
         UpdatePageContent();
+
+        scr_AudioManager.PlaySoundEffect(pageFlipSFX);
 
     }
 
