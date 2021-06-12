@@ -8,4 +8,8 @@ public class scr_Ingredient : ScriptableObject
     [SerializeField]
     new string name;
     public string Name => name;
+
+    [SerializeField]
+    Sprite sprite;
+    public Sprite Sprite => sprite;
 }
