@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName ="New Potion", menuName ="ScriptableObject/Potion")]
 public class scr_Potion : ScriptableObject
@@ -8,6 +9,10 @@ public class scr_Potion : ScriptableObject
     [SerializeField]
     new string name;
     public string Name => name;
+
+    [SerializeField]
+    Sprite sprite;
+    public Sprite Sprite => sprite;
 
     [SerializeField]
     [Tooltip("Required ingredients to make this potion. Ingredients cannot repeat, and 3 must be entered")]
