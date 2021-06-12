@@ -14,7 +14,6 @@ public class scr_DragCanvasManager : MonoBehaviour
         foreach(scr_Dragable dragable in dragables)
         {
             dragable.SetCanvas(canvas);
-            dragable.SetDragable(true);
         }
     }
 }

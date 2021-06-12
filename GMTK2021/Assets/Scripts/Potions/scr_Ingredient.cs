@@ -12,4 +12,5 @@ public class scr_Ingredient : ScriptableObject
     [SerializeField]
     Sprite sprite;
     public Sprite Sprite => sprite;
+
 }

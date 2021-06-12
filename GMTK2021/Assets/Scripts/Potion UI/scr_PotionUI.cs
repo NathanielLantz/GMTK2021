@@ -10,28 +10,71 @@ public class scr_PotionUI : MonoBehaviour
     scr_PotionManager potionManager;
 
     [SerializeField]
+    Transform startingPosition;
+
+    [SerializeField]
     Button makePotionButton;
     [SerializeField]
     Button clearIngredientsButton;
 
     [SerializeField]
-    TextMeshProUGUI ingredientText0;
-    [SerializeField]
-    TextMeshProUGUI ingredientText1;
-    [SerializeField]
-    TextMeshProUGUI ingredientText2;
-    [SerializeField]
     TextMeshProUGUI potionText;
+
+    [SerializeField]
+    scr_PotionResultUI potionResultUI;
+
+    [SerializeField]
+    scr_IngredientSlotUI ingredientSlot0;
+    [SerializeField]
+    scr_IngredientSlotUI ingredientSlot1;
+    [SerializeField]
+    scr_IngredientSlotUI ingredientSlot2;
+
+    scr_IngredientUI[] ingredientUIs;
+    int currentIngredient;
 
     private void Start()
     {
         makePotionButton.interactable = false;
         clearIngredientsButton.interactable = false;
 
-        ingredientText0.text = "";
-        ingredientText1.text = "";
-        ingredientText2.text = "";
         potionText.text = "";
+
+        ingredientUIs = FindObjectsOfType<scr_IngredientUI>();
+        RestartPotion(false);
+        currentIngredient = 0;
+    }
+
+    public void SetNextIngredient(scr_Ingredient ingredient)
+    {
+        ingredientUIs[currentIngredient].SetIngredient(ingredient);
+        ingredientUIs[currentIngredient].gameObject.SetActive(true);
+        currentIngredient += 1;
+    }
+
+    public void RestartPotion(bool slotsOnly)
+    {
+        currentIngredient = 0;
+        foreach(scr_IngredientUI ingredientUI in ingredientUIs)
+        {
+            if (!slotsOnly | ingredientUI.IsSetInSlot)
+            {
+                ingredientUI.UnsetIngredient();
+                ingredientUI.gameObject.SetActive(false);
+                ingredientUI.transform.position = startingPosition.position;
+            }
+
+        }
+        List<scr_IngredientSlotUI> slots = new List<scr_IngredientSlotUI>() {
+            ingredientSlot0,
+            ingredientSlot1,
+            ingredientSlot2
+        };
+        foreach(scr_IngredientSlotUI slotUI in slots)
+        {
+            slotUI.UnsetObject();
+
+        }
     }
 
     public void PotionMaker_OnClear()
@@ -39,23 +82,12 @@ public class scr_PotionUI : MonoBehaviour
         makePotionButton.interactable = false;
         clearIngredientsButton.interactable = false;
 
-        ingredientText0.text = "";
-        ingredientText1.text = "";
-        ingredientText2.text = "";
 
+        RestartPotion(true);
     }
 
     public void PotionMaker_OnIngredientSelected(int slot, scr_Ingredient ingredient)
     {
-        switch(slot)
-        {
-            case 0:
-                ingredientText0.text = ingredient.Name; break;
-            case 1:
-                ingredientText1.text = ingredient.Name; break;
-            case 2:
-                ingredientText2.text = ingredient.Name; break;
-        }
         clearIngredientsButton.interactable = true;
     }
 
@@ -67,6 +99,7 @@ public class scr_PotionUI : MonoBehaviour
     public void PotionManager_OnPotionCreated(scr_Potion potionCreated)
     {
         potionText.text = potionCreated.Name;
+        RestartPotion(true);
     }
 
     public void PotionMakeButton_OnClick()
@@ -77,5 +110,16 @@ public class scr_PotionUI : MonoBehaviour
     public void ClearButton_OnClick()
     {
         potionManager.ClearIngredients();
+        Debug.Log("clear");
     }
+
+    public void IngredientSlot_OnChange(int slot, scr_Ingredient ingredient = null)
+    {
+        if (ingredient == null)
+        {
+            potionManager.ClearIngredient(slot);
+        }
+    }
+
+
 }

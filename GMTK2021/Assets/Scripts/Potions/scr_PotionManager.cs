@@ -33,7 +33,7 @@ public class scr_PotionManager : MonoBehaviour
     }
 
 
-    public bool SelectIngredient(scr_Ingredient ingredient)
+    public bool SelectIngredient(int slot, scr_Ingredient ingredient)
     {
         if(ingredients.Count == 3)
         {
@@ -48,7 +48,7 @@ public class scr_PotionManager : MonoBehaviour
         }
 
         ingredients.Add(ingredient);
-        OnIngredientsSelected?.Invoke(ingredients.Count - 1, ingredient);
+        OnIngredientsSelected?.Invoke(slot, ingredient);
 
         if(ingredients.Count == 3)
         {
@@ -62,6 +62,13 @@ public class scr_PotionManager : MonoBehaviour
     {
         ingredients.Clear();
         OnIngredientsCleared?.Invoke();
+    }
+
+    public void ClearIngredient(int slot)
+    {
+        if(slot < 0 | slot >= ingredients.Count) { Debug.LogError("Invalid slot to remove ingredient at " + slot); }
+
+        ingredients.RemoveAt(slot);
     }
 
     public void AttemptMakePotion()
@@ -95,6 +102,7 @@ public class scr_PotionManager : MonoBehaviour
 
         }
 
+        Debug.Log($"Potion made {potionCreated.Name} with ingredients: {ingredients[0]}, {ingredients[1]}, {ingredients[2]}");
         ClearIngredients();
         OnPotionCreated?.Invoke(potionCreated);
     }
