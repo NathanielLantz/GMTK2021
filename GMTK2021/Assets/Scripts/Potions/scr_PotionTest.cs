@@ -14,6 +14,9 @@ public class scr_PotionTest : MonoBehaviour
     scr_PotionManager potionManager;
 
     [SerializeField]
+    scr_PotionUI potionUI;
+
+    [SerializeField]
     TextMeshProUGUI targetText;
 
     [SerializeField]
@@ -32,43 +35,33 @@ public class scr_PotionTest : MonoBehaviour
     [SerializeField]
     scr_Ingredient f;
 
+    Queue<scr_Ingredient> ingredientsToTest;
+
     // Start is called before the first frame update
     void Start()
     {
         targetText.text = targetPotion.Name;
         resultText.text = "";
+
+        ingredientsToTest = new Queue<scr_Ingredient>();
+        ingredientsToTest.Enqueue(a);
+        ingredientsToTest.Enqueue(b);
+        ingredientsToTest.Enqueue(c);
+        ingredientsToTest.Enqueue(d);
+        ingredientsToTest.Enqueue(e);
+        ingredientsToTest.Enqueue(f);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
-            potionManager.SelectIngredient(a);
-        }
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            potionManager.SelectIngredient(b);
 
-        }
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            potionManager.SelectIngredient(c);
-
-        }
-        if(Input.GetKeyDown(KeyCode.D))
-        {
-            potionManager.SelectIngredient(d);
-        }
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            potionManager.SelectIngredient(e);
-
-        }
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            potionManager.SelectIngredient(f);
-
+            if (ingredientsToTest.Peek() == null) { return; }
+            scr_Ingredient ingredient = ingredientsToTest.Dequeue();
+            potionUI.SetNextIngredient(ingredient);
+            ingredientsToTest.Enqueue(ingredient);
         }
     }
 
