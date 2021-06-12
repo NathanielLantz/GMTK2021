@@ -25,6 +25,8 @@ public class scr_IngredientSlotUI : MonoBehaviour, ISlot
         potionManager.SelectIngredient(transform.GetSiblingIndex(), ingredientUI.CurrentIngredient);
         Debug.Log("adding " + ingredientUI.CurrentIngredient + " at " + transform.GetSiblingIndex());
         Debug.Log("Set ingredient to " + ingredientUI.CurrentIngredient.Name);
+
+
     }
 
     public void UnsetIngredient()
