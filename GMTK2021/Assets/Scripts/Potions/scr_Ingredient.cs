@@ -7,4 +7,5 @@ public class scr_Ingredient : ScriptableObject
 {
     [SerializeField]
     new string name;
+    public string Name => name;
 }
