@@ -6,11 +6,9 @@ using TMPro;
 
 public class scr_PotionUI : MonoBehaviour
 {
+    [Header("Internal References")]
     [SerializeField]
     GameObject potionUIContent;
-
-    [SerializeField]
-    scr_PotionManager potionManager;
 
     [SerializeField]
     Transform startingPosition;
@@ -26,6 +24,7 @@ public class scr_PotionUI : MonoBehaviour
     [SerializeField]
     scr_PotionResultUI potionResultUI;
 
+
     [SerializeField]
     scr_IngredientSlotUI ingredientSlot0;
     [SerializeField]
@@ -34,7 +33,41 @@ public class scr_PotionUI : MonoBehaviour
     scr_IngredientSlotUI ingredientSlot2;
 
     scr_IngredientUI[] ingredientUIs;
+    public scr_IngredientUI[] IngredientUIs => ingredientUIs;
+
+    [Header("External References")]
+    [SerializeField]
+    scr_PotionManager potionManager;
+
+    [SerializeField]
+    AudioClip potionCreatedSFX;
+
+    [SerializeField]
+    AudioClip ingredientDroppedSFX;
+    public AudioClip IngredientDroppedSFX => ingredientDroppedSFX;
+    [SerializeField]
+    AudioClip ingredientPickedUpSFX;
+    public AudioClip IngredientPickedUpSFX => ingredientPickedUpSFX;
+
     int currentIngredient;
+
+    static scr_PotionUI instance;
+    public static scr_PotionUI Instance { get
+        {
+            if(instance == null)
+            {
+                instance = FindObjectOfType<scr_PotionUI>();
+            }
+
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+        ingredientUIs = FindObjectsOfType<scr_IngredientUI>();
+    }
 
     private void Start()
     {
@@ -43,7 +76,6 @@ public class scr_PotionUI : MonoBehaviour
 
         potionText.text = "";
 
-        ingredientUIs = FindObjectsOfType<scr_IngredientUI>();
         RestartPotion(false);
         currentIngredient = 0;
     }
@@ -84,6 +116,7 @@ public class scr_PotionUI : MonoBehaviour
     {
         makePotionButton.interactable = false;
         clearIngredientsButton.interactable = false;
+        scr_AudioManager.PlaySoundEffect(ingredientDroppedSFX, 0.2f);
 
 
         RestartPotion(true);
@@ -103,6 +136,7 @@ public class scr_PotionUI : MonoBehaviour
     {
         potionText.text = potionCreated.Name;
         RestartPotion(true);
+        scr_AudioManager.PlaySoundEffect(potionCreatedSFX, 0.2f);
     }
 
     public void PotionMakeButton_OnClick()
