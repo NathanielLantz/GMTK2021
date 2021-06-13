@@ -38,6 +38,15 @@ public class DescriptiveTextController : MonoBehaviour
     scr_Potion currentPotion;
     public scr_Potion CurrentPotion => currentPotion;
 
+    private void OnEnable()
+    {
+        scr_PotionUI.Instance.OnPotionUIClose?.AddListener(DisallowMouse);
+    }
+    private void OnDisable()
+    {
+        scr_PotionUI.Instance.OnPotionUIClose?.RemoveListener(DisallowMouse);
+    }
+
     void Update()
     {
         descriptiveText.text = "";
@@ -66,7 +75,7 @@ public class DescriptiveTextController : MonoBehaviour
 
         if(currentIngredient != null)
         {
-            descriptiveText.text = "Drop " + currentIngredient.Name + "(RMB)";
+            descriptiveText.text += "\nDrop " + currentIngredient.Name + "(RMB)";
             if (Input.GetMouseButtonDown(1))
             {
                 Debug.Log("dropped " + currentIngredient.Name);
@@ -88,6 +97,7 @@ public class DescriptiveTextController : MonoBehaviour
     public void SetCurrentPotion(scr_Potion potion)
     {
         currentPotion = potion;
+        
     }
 
     public void ResetIngredient()
@@ -99,5 +109,19 @@ public class DescriptiveTextController : MonoBehaviour
     public void ResetPotion()
     {
         currentPotion = null;
+    }
+
+    public void AllowMouse()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+    }
+
+    public void DisallowMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
     }
 }

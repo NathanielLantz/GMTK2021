@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class scr_PotionUI : MonoBehaviour
 {
+
     [Header("Internal References")]
     [SerializeField]
     GameObject potionUIContent;
@@ -49,6 +51,7 @@ public class scr_PotionUI : MonoBehaviour
     AudioClip ingredientPickedUpSFX;
     public AudioClip IngredientPickedUpSFX => ingredientPickedUpSFX;
 
+    public UnityEvent OnPotionUIClose;
     int currentIngredient;
 
     static scr_PotionUI instance;
@@ -172,6 +175,7 @@ public class scr_PotionUI : MonoBehaviour
     public void HidePotionUI()
     {
         potionUIContent.SetActive(false);
+        OnPotionUIClose?.Invoke();
 
     }
 

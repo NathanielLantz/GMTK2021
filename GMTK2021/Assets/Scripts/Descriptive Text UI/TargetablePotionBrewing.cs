@@ -17,6 +17,7 @@ public class TargetablePotionBrewing : MonoBehaviour, TargetableObject
         scr_PotionUI.Instance.SetNextIngredient(controller.CurrentIngredient);
         scr_PotionUI.Instance.ShowPotionUI();
         controller.ResetIngredient();
+        controller.AllowMouse();
     }
 
 }
