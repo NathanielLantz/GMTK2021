@@ -83,6 +83,11 @@ public class scr_PotionUI : MonoBehaviour
 
     public void SetNextIngredient(scr_Ingredient ingredient)
     {
+        if(ingredient == null)
+        {
+            Debug.Log("Got null ingredient");
+            return;
+        }
         ingredientUIs[currentIngredient].SetIngredient(ingredient);
         ingredientUIs[currentIngredient].gameObject.SetActive(true);
         currentIngredient += 1;
