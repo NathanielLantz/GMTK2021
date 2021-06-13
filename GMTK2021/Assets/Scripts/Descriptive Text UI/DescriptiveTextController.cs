@@ -31,6 +31,8 @@ public class DescriptiveTextController : MonoBehaviour
 
     scr_Ingredient currentIngredient;
     public scr_Ingredient CurrentIngredient => currentIngredient;
+    scr_Potion currentPotion;
+    public scr_Potion CurrentPotion => currentPotion;
 
     void Update()
     {
@@ -41,16 +43,13 @@ public class DescriptiveTextController : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * distance, Color.red);
         if (Physics.Raycast(ray, out hit, distance)){
-            Debug.Log(hit.collider.gameObject.name);
             TargetableObject targetableObject = hit.collider.gameObject.GetComponent<TargetableObject>();
             if (targetableObject != null)
             {
                 descriptiveText.text = targetableObject.DescriptiveText;
-                Debug.Log("Descriptive text: " + targetableObject.DescriptiveText);
                 if (Input.GetMouseButtonDown(0))
                 {
                     targetableObject.Interact(this);
-                    
                 }
             }
 
