@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionUIContent: {fileID: 0}
-  potionManager: {fileID: 5576967025282885924}
   startingPosition: {fileID: 2458979331386191846}
   makePotionButton: {fileID: 8012982064585939933}
   clearIngredientsButton: {fileID: 8344479356522943496}
@@ -110,6 +109,10 @@ MonoBehaviour:
   ingredientSlot0: {fileID: 8961969829661093125}
   ingredientSlot1: {fileID: 1452619410739901825}
   ingredientSlot2: {fileID: 5747868451934676487}
+  potionManager: {fileID: 5576967025282885924}
+  potionCreatedSFX: {fileID: 0}
+  ingredientDroppedSFX: {fileID: 0}
+  ingredientPickedUpSFX: {fileID: 0}
 --- !u!223 &7052775698382580393
 Canvas:
   m_ObjectHideFlags: 0
@@ -308,7 +311,7 @@ RectTransform:
   m_GameObject: {fileID: 2546410848069448285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.3365, y: 3.3365, z: 3.3365}
   m_Children: []
   m_Father: {fileID: 79234688991818689}
   m_RootOrder: 1
@@ -316,7 +319,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -5, y: 209}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 62, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9139218995494154588
 CanvasRenderer:
@@ -345,7 +348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4743b373e04c56941961b0c97226c38b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73e491e3d5735eb4092b4c2d1ba4358b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -836,6 +839,80 @@ RectTransform:
   m_AnchoredPosition: {x: -72, y: 463}
   m_SizeDelta: {x: 623.6604, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4750594474256129010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3153584766990622296}
+  - component: {fileID: 3516041237201389248}
+  - component: {fileID: 7651856918833030547}
+  m_Layer: 5
+  m_Name: Bottle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3153584766990622296
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4750594474256129010}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.3365, y: 3.3365, z: 3.3365}
+  m_Children: []
+  m_Father: {fileID: 79234688991818689}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5, y: 209}
+  m_SizeDelta: {x: 62, y: 81}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3516041237201389248
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4750594474256129010}
+  m_CullTransparentMesh: 0
+--- !u!114 &7651856918833030547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4750594474256129010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e9c0b52ac66dc774bb9f11227a73503d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5489086565905758077
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +978,7 @@ RectTransform:
   m_Children:
   - {fileID: 6268296396199150600}
   - {fileID: 593667279960202943}
+  - {fileID: 3153584766990622296}
   m_Father: {fileID: 4964833685259785080}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -924,8 +1002,8 @@ MonoBehaviour:
   potionCreatedSFX: {fileID: 0}
   image: {fileID: 6285778707572102928}
   potionBottleTextures:
-  - originalTexture: {fileID: 2800000, guid: 4743b373e04c56941961b0c97226c38b, type: 3}
-    mask: {fileID: 2800000, guid: d95a0d4bd5f0c9b4fbc332a32f2e745f, type: 3}
+  - originalTexture: {fileID: 2800000, guid: 73e491e3d5735eb4092b4c2d1ba4358b, type: 3}
+    mask: {fileID: 0}
 --- !u!1 &6054523143044455405
 GameObject:
   m_ObjectHideFlags: 0

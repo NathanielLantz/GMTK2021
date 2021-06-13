@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51eb774ca49d8a3429137a232300d965, type: 3}
   m_Name: so_Potion6
   m_EditorClassIdentifier: 
-  name: 
+  name: Potion of Human Transformation
   sprite: {fileID: 0}
-  colour: {r: 0, g: 0, b: 0, a: 0}
-  ingredient1: {fileID: 0}
-  ingredient2: {fileID: 0}
-  ingredient3: {fileID: 0}
+  colour: {r: 0.5849056, g: 0.4512709, b: 0.26210395, a: 0}
+  ingredient1: {fileID: 11400000, guid: 5a3104147c0674a42a377b06321fc0fc, type: 2}
+  ingredient2: {fileID: 11400000, guid: 025e042542b88be4e98853e808dea110, type: 2}
+  ingredient3: {fileID: 11400000, guid: c6214dec094567f4db576b53de70d733, type: 2}

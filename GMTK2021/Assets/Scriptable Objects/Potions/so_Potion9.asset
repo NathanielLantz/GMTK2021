@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51eb774ca49d8a3429137a232300d965, type: 3}
   m_Name: so_Potion9
   m_EditorClassIdentifier: 
-  name: 
+  name: Potion of Deceit
   sprite: {fileID: 0}
-  colour: {r: 0, g: 0, b: 0, a: 0}
-  ingredient1: {fileID: 0}
-  ingredient2: {fileID: 0}
-  ingredient3: {fileID: 0}
+  colour: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
+  ingredient1: {fileID: 11400000, guid: 0ed4540e22e01c44596ab35307c7e34e, type: 2}
+  ingredient2: {fileID: 11400000, guid: 025e042542b88be4e98853e808dea110, type: 2}
+  ingredient3: {fileID: 11400000, guid: 7ec43891b9c3b004f8961d8ff9b8c744, type: 2}
