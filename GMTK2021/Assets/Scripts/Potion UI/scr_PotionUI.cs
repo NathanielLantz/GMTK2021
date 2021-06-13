@@ -78,6 +78,7 @@ public class scr_PotionUI : MonoBehaviour
 
         RestartPotion(false);
         currentIngredient = 0;
+        HidePotionUI();
     }
 
     public void SetNextIngredient(scr_Ingredient ingredient)
