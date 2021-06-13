@@ -75,7 +75,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_8D7B739: {r: 0, g: 0, b: 0, a: 1}
-    - Color_F301AEC4: {r: 0, g: 0.5497662, b: 0.081558734, a: 1}
+    - Color_F301AEC4: {r: 0.1509434, g: 0, b: 0.10681642, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
