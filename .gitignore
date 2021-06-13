@@ -64,3 +64,4 @@ GMTK2021/Packages/packages-lock.json
 GMTK2021/ProjectSettings/Packages/com.unity.probuilder/Settings.json
 GMTK2021/Packages/packages-lock.json
 GMTK2021/ProjectSettings/Packages/com.unity.probuilder/Settings.json
+*.meta
