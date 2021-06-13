@@ -222,6 +222,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 41979ab5f8212ab43820939b3d2ea8bc,
         type: 2}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 587333936}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetCurrentPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6513315520356523598, guid: 2dc90b03fd7ee3640be5202a3e878e52,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9566,7 +9591,7 @@ PrefabInstance:
     - target: {fileID: 9132705077457569187, guid: 10ba9c50d6cc66f499d99074acf157c7,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.6438868
+      value: 0.8665781
       objectReference: {fileID: 0}
     - target: {fileID: 9132705077457569187, guid: 10ba9c50d6cc66f499d99074acf157c7,
         type: 3}
@@ -9576,7 +9601,7 @@ PrefabInstance:
     - target: {fileID: 9132705077457569187, guid: 10ba9c50d6cc66f499d99074acf157c7,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.85478127
+      value: -0.033872917
       objectReference: {fileID: 0}
     - target: {fileID: 9132705077457569187, guid: 10ba9c50d6cc66f499d99074acf157c7,
         type: 3}
