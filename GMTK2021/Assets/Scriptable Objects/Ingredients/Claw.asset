@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60f173246a212747bfcbe08224aeae4, type: 3}
   m_Name: Claw
   m_EditorClassIdentifier: 
-  name: 
-  sprite: {fileID: 0}
+  name: Shapechanger Claw
+  sprite: {fileID: 21300000, guid: d6a7ccb9e2d8e554b9c105d1ac714cde, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mushroom
   m_EditorClassIdentifier: 
   name: Ever Growing Mushrooms
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 1134a1e963a8e1a4fa28861349f0b92d, type: 3}

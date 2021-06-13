@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60f173246a212747bfcbe08224aeae4, type: 3}
   m_Name: Root
   m_EditorClassIdentifier: 
-  name: 
-  sprite: {fileID: 0}
+  name: Spicy Mandrake Root
+  sprite: {fileID: 21300000, guid: 788a447421440eb489a18c54716b82f9, type: 3}
