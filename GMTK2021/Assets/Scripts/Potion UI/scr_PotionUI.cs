@@ -7,6 +7,9 @@ using TMPro;
 public class scr_PotionUI : MonoBehaviour
 {
     [SerializeField]
+    GameObject potionUIContent;
+
+    [SerializeField]
     scr_PotionManager potionManager;
 
     [SerializeField]
@@ -121,5 +124,15 @@ public class scr_PotionUI : MonoBehaviour
         }
     }
 
+    public void ShowPotionUI()
+    {
+        potionUIContent.SetActive(true);
+    }
+
+    public void HidePotionUI()
+    {
+        potionUIContent.SetActive(false);
+
+    }
 
 }
