@@ -979,6 +979,7 @@ MonoBehaviour:
     type: 3}
   mainCamera: {fileID: 1815622228}
   descriptiveText: {fileID: 1935959656}
+  characterController: {fileID: 0}
 --- !u!1001 &588539821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1189,6 +1190,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mixing Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 587333936}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetCurrentPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576967025282885924, guid: 2dc90b03fd7ee3640be5202a3e878e52,
+        type: 3}
+      propertyPath: OnPotionCreated.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6579385782327353113, guid: 2dc90b03fd7ee3640be5202a3e878e52,
         type: 3}
