@@ -81,6 +81,7 @@ public class scr_Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         ingredientUI.IsSetInSlot = false;
         rectTransform.anchoredPosition = eventData.position / canvas.scaleFactor; //move the mouse the amount the drag was moved
         //dragEffect.StartDragging();
+        scr_AudioManager.PlaySoundEffect(scr_PotionUI.Instance.IngredientPickedUpSFX);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -94,6 +95,8 @@ public class scr_Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         {
             SetDragable(true);
         }
+        scr_AudioManager.PlaySoundEffect(scr_PotionUI.Instance.IngredientDroppedSFX);
+         
         //dragEffect.StopDragging();
     }
 

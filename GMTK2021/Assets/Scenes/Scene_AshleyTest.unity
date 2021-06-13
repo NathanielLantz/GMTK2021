@@ -679,6 +679,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 712024776}
+        m_MethodName: PlaySoundEffectInstantly
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f96064129d776e347aa041f7456a96dc,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &537027511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +728,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537027508}
   m_CullTransparentMesh: 0
+--- !u!114 &712024776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5709636543854180356, guid: 74e3d3b49d19af24491ce1183aa38557,
+    type: 3}
+  m_PrefabInstance: {fileID: 5709636544266965545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be116c42acbdece4a9a88e4c3c0e7bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &724119022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1834,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 712024776}
+        m_MethodName: PlaySoundEffectInstantly
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f96064129d776e347aa041f7456a96dc,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1487666453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2007,15 +2043,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionUIContent: {fileID: 0}
-  potionManager: {fileID: 1963574517}
   startingPosition: {fileID: 1860229218}
   makePotionButton: {fileID: 1487666452}
   clearIngredientsButton: {fileID: 537027510}
   potionText: {fileID: 1124396689}
-  potionResultUI: {fileID: 0}
+  potionResultUI: {fileID: 101499451}
   ingredientSlot0: {fileID: 1331903762}
   ingredientSlot1: {fileID: 1409410562}
   ingredientSlot2: {fileID: 1289048256}
+  potionManager: {fileID: 1963574517}
+  potionCreatedSFX: {fileID: 8300000, guid: d1615cf89ced06945934895dca121954, type: 3}
+  ingredientDroppedSFX: {fileID: 8300000, guid: 4b25d76e94826a645b6a7a9fb47107fc,
+    type: 3}
+  ingredientPickedUpSFX: {fileID: 8300000, guid: 45ba9b2f156c3c9449d5c02081efe829,
+    type: 3}
 --- !u!114 &1632013816
 MonoBehaviour:
   m_ObjectHideFlags: 0

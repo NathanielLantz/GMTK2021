@@ -31,17 +31,22 @@ public class scr_AudioManager : MonoBehaviour
     public static void PlayMusic(AudioClip audioClip, float delay = 0)
     {
 
-        instance.PlaySoundAfterDelay(audioClip, false, delay);
+        instance.StartCoroutine(instance.PlaySoundAfterDelay(audioClip, false, delay));
     }
 
     public static void StopMusic(float delay = 0)
     {
         instance.StartCoroutine(instance.StopMusicAfterDelay(delay));
-    } 
+    }
+
+    public void PlaySoundEffectInstantly(AudioClip audioClip)
+    {
+        StartCoroutine(PlaySoundAfterDelay(audioClip, true, 0));
+    }
 
     public static void PlaySoundEffect(AudioClip audioClip, float delay = 0)
     {
-        instance.PlaySoundAfterDelay(audioClip, true, delay);
+        instance.StartCoroutine(instance.PlaySoundAfterDelay(audioClip, true, delay));
     }
 
     private IEnumerator StopMusicAfterDelay(float delay)
@@ -60,6 +65,7 @@ public class scr_AudioManager : MonoBehaviour
             soundEffectsAudioSource.PlayOneShot(audioClip);
         }
         else
+
         {
             musicAudioSource.clip = audioClip;
             musicAudioSource.Play();

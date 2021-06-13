@@ -26,7 +26,6 @@ public class scr_PotionResultUI : MonoBehaviour
     public void PotionManager_OnPotionCreated(scr_Potion potion)
     {
         SetColour(potion.Colour);
-        scr_AudioManager.PlaySoundEffect(potionCreatedSFX);
     }
 
     public void SetColour(Color colour)
