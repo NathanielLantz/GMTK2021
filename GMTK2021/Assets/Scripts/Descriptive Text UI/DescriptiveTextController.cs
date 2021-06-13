@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+//using UnityStandardAssets.Characters.FirstPerson;
 
 public interface TargetableObject
 {
@@ -29,6 +30,9 @@ public class DescriptiveTextController : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI descriptiveText;
 
+    [SerializeField]
+    CharacterController characterController;
+
     scr_Ingredient currentIngredient;
     public scr_Ingredient CurrentIngredient => currentIngredient;
     scr_Potion currentPotion;
@@ -47,16 +51,22 @@ public class DescriptiveTextController : MonoBehaviour
             if (targetableObject != null)
             {
                 descriptiveText.text = targetableObject.DescriptiveText;
+                
                 if (Input.GetMouseButtonDown(0))
                 {
                     targetableObject.Interact(this);
                 }
+            }
+            else
+            {
+                descriptiveText.text = "";
             }
 
         }
 
         if(currentIngredient != null)
         {
+            descriptiveText.text = "Drop " + currentIngredient.Name + "(RMB)";
             if (Input.GetMouseButtonDown(1))
             {
                 Debug.Log("dropped " + currentIngredient.Name);
@@ -73,5 +83,21 @@ public class DescriptiveTextController : MonoBehaviour
         currentIngredient = ingredient;
         scr_AudioManager.PlaySoundEffect(ingredientPickedUpSFX);
         
+    }
+
+    public void SetCurrentPotion(scr_Potion potion)
+    {
+        currentPotion = potion;
+    }
+
+    public void ResetIngredient()
+    {
+        currentIngredient = null;
+    }
+
+    //call this once potion is given
+    public void ResetPotion()
+    {
+        currentPotion = null;
     }
 }

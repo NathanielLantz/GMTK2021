@@ -8,7 +8,7 @@ public class TargetableIngredient: MonoBehaviour, TargetableObject
     scr_Ingredient ingredient;
     public scr_Ingredient Ingredient => ingredient;
 
-    public string DescriptiveText => "Pick up " + ingredient.Name;
+    public string DescriptiveText => "Pick up " + ingredient.Name + " (LMB)";
 
     public void Interact(DescriptiveTextController controller)
     {
