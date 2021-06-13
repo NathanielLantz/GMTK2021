@@ -6,7 +6,7 @@ using TMPro;
 public class DescriptiveTextController : MonoBehaviour
 {
     [SerializeField]
-    Camera camera;
+    Camera mainCamera;
 
     [SerializeField]
     LayerMask targetableMask;
@@ -20,7 +20,7 @@ public class DescriptiveTextController : MonoBehaviour
 
         RaycastHit hit;
         
-        if (Physics.Raycast(camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0)), out hit, 20)){
+        if (Physics.Raycast(mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0)), out hit, 20)){
             TargetableObject tagetableObject = hit.collider.gameObject.GetComponent<TargetableObject>();
             if (tagetableObject != null)
             {
