@@ -9,11 +9,12 @@ public class TargetablePotionBrewing : MonoBehaviour, TargetableObject
 
     public void Interact(DescriptiveTextController controller)
     {
-        Debug.Log("start potion");
         if(controller.CurrentIngredient == null)
         {
             return;
         }
+
+        Debug.Log("start potion");
         scr_PotionUI.Instance.SetNextIngredient(controller.CurrentIngredient);
         scr_PotionUI.Instance.ShowPotionUI();
         controller.ResetIngredient();

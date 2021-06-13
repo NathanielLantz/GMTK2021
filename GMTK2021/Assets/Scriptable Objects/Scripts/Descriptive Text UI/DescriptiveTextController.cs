@@ -30,8 +30,6 @@ public class DescriptiveTextController : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI descriptiveText;
 
-    [SerializeField]
-    CharacterController characterController;
 
     scr_Ingredient currentIngredient;
     public scr_Ingredient CurrentIngredient => currentIngredient;

@@ -11,13 +11,23 @@ public static class scr_ApplyColourToSprite
         Texture2D modifiedTexture = new Texture2D(originalTexture.width, originalTexture.height, TextureFormat.RGBA32, true);
 
         Color[] baseColours = originalTexture.GetPixels();
-        Color[] maskColours = mask.GetPixels();
+
+        Color[] maskColours = new Color[baseColours.Length];
+        if (mask != null)
+        {
+            maskColours = mask.GetPixels();
+        }
 
         //apply colours
         for(int i = 0; i < baseColours.Length; i++)
         {
-            
-            if (maskColours[i].Equals(Color.white))
+            bool applyColour = true;
+
+            if(mask != null)
+            {
+                applyColour = maskColours[i].Equals(Color.white);
+            }
+            if (applyColour)
             {
                 baseColours[i].r = baseColours[i].r * colourToApply.r;
                 baseColours[i].g = baseColours[i].g * colourToApply.g;
