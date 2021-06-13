@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cont_Frog
+  m_Controller: {fileID: 9100000, guid: 109680da8b776b54cb01f83f9715d128, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: edb1fad3b2e62e0448d6849789306d25, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 78c8266cc61f97449874dc11bb664504, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 45042b181d12b1341b5423fd479f668e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cda745012d108874b93224f3789d1dcd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 43a58bd0b964e8548903e6b34a1de6c5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b4acc0fee63c5e949b34b9863c586c95, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ecedb3cdb5e89894a86a7d627ef31b53, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b3cbf7ac8d47281458f2e8528bc944af, type: 2}
