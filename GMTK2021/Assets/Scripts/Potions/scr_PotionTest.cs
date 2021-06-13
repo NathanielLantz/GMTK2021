@@ -23,17 +23,7 @@ public class scr_PotionTest : MonoBehaviour
     TextMeshProUGUI resultText;
 
     [SerializeField]
-    scr_Ingredient a;
-    [SerializeField]
-    scr_Ingredient b;
-    [SerializeField]
-    scr_Ingredient c;
-    [SerializeField]
-    scr_Ingredient d;
-    [SerializeField]
-    scr_Ingredient e;
-    [SerializeField]
-    scr_Ingredient f;
+    List<scr_Ingredient> ingredients;
 
     Queue<scr_Ingredient> ingredientsToTest;
 
@@ -44,12 +34,10 @@ public class scr_PotionTest : MonoBehaviour
         resultText.text = "";
 
         ingredientsToTest = new Queue<scr_Ingredient>();
-        ingredientsToTest.Enqueue(a);
-        ingredientsToTest.Enqueue(b);
-        ingredientsToTest.Enqueue(c);
-        ingredientsToTest.Enqueue(d);
-        ingredientsToTest.Enqueue(e);
-        ingredientsToTest.Enqueue(f);
+        foreach(scr_Ingredient ingredient in ingredients)
+        {
+            ingredientsToTest.Enqueue(ingredient);
+        }
 
     }
 

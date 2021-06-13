@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -919,12 +919,13 @@ MonoBehaviour:
   potionUI: {fileID: 1632013815}
   targetText: {fileID: 724119024}
   resultText: {fileID: 1895969871}
-  a: {fileID: 11400000, guid: 155af0bfec5912b47892f1206b44c25a, type: 2}
-  b: {fileID: 11400000, guid: f61ae9dd994358046982972a7e4f7c09, type: 2}
-  c: {fileID: 11400000, guid: 35be7ff9ed4a90648b6ff7e0943b1a78, type: 2}
-  d: {fileID: 11400000, guid: 0dfd23eb1be441c449e07fecea30d63b, type: 2}
-  e: {fileID: 11400000, guid: 6b124421afa60b54c927884ef6d47008, type: 2}
-  f: {fileID: 11400000, guid: 7fb3bf656ffa2b8438c80271f50aa342, type: 2}
+  ingredients:
+  - {fileID: 11400000, guid: 7ec43891b9c3b004f8961d8ff9b8c744, type: 2}
+  - {fileID: 11400000, guid: c6214dec094567f4db576b53de70d733, type: 2}
+  - {fileID: 11400000, guid: 5a3104147c0674a42a377b06321fc0fc, type: 2}
+  - {fileID: 11400000, guid: 3c94e5225f40c5142828ddcc94f713e7, type: 2}
+  - {fileID: 11400000, guid: 0ed4540e22e01c44596ab35307c7e34e, type: 2}
+  - {fileID: 11400000, guid: 025e042542b88be4e98853e808dea110, type: 2}
 --- !u!4 &872296990
 Transform:
   m_ObjectHideFlags: 0
@@ -2005,6 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020d38180d4efbc45b2089497390e1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potionUIContent: {fileID: 0}
   potionManager: {fileID: 1963574517}
   startingPosition: {fileID: 1860229218}
   makePotionButton: {fileID: 1487666452}
