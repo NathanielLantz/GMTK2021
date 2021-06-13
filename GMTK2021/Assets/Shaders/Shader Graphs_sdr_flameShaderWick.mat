@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_sdr_flameShader
+  m_Name: Shader Graphs_sdr_flameShaderWick
   m_Shader: {fileID: -6465566751694194690, guid: a6186567241732d439ab1a47bf4458e7,
     type: 3}
   m_ShaderKeywords: 
@@ -27,4 +27,4 @@ Material:
     m_Floats:
     - Vector1_AD9A02EF: 0.05
     m_Colors:
-    - Color_AE4032A9: {r: 0.5019608, g: 0, b: 0.07730115, a: 0}
+    - Color_AE4032A9: {r: 1, g: 0.028217573, b: 0, a: 0}
